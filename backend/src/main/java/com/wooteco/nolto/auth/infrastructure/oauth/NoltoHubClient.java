@@ -10,12 +10,12 @@ import org.springframework.util.MultiValueMap;
 
 @Component
 @RequiredArgsConstructor
-public class MockClient extends OAuthClientDetail {
+public class NoltoHubClient extends OAuthClientDetail {
 
     private static final String NOLTOHUB_USERINFO_REQUEST_URL = "http://noltohub.kro.kr/user";
     private static final String GITHUB_TOKEN_REQUEST_URL = "http://noltohub.kro.kr/token";
 
-    private final GithubOAuthInfo githubOAuthInfo;
+    private final NoltoHubOAuthInfo noltoHubOAuthInfo;
 
     @Override
     public User generateUserInfo(OAuthTokenResponse oauthToken) {
@@ -28,13 +28,13 @@ public class MockClient extends OAuthClientDetail {
     }
 
     @Override
-    public boolean checkType(final SocialType socialType) {
+    public boolean checkType(SocialType socialType) {
         return SocialType.NOLTOHUB.equals(socialType);
     }
 
     @Override
-    protected MultiValueMap<String, String> generateAccessTokenRequestParam(final String code) {
-        return githubOAuthInfo.generateAccessTokenRequestParam(code);
+    protected MultiValueMap<String, String> generateAccessTokenRequestParam(String code) {
+        return noltoHubOAuthInfo.generateAccessTokenRequestParam(code);
     }
 }
 

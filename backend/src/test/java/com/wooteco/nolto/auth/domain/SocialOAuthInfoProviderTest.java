@@ -2,6 +2,7 @@ package com.wooteco.nolto.auth.domain;
 
 import com.wooteco.nolto.auth.infrastructure.oauth.GithubOAuthInfo;
 import com.wooteco.nolto.auth.infrastructure.oauth.GoogleOAuthInfo;
+import com.wooteco.nolto.auth.infrastructure.oauth.NoltoHubOAuthInfo;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(classes = {GithubOAuthInfo.class, GoogleOAuthInfo.class, SocialOAuthInfoProvider.class})
+@SpringBootTest(classes = {GithubOAuthInfo.class, GoogleOAuthInfo.class, SocialOAuthInfoProvider.class, NoltoHubOAuthInfo.class})
 class SocialOAuthInfoProviderTest {
 
     @Autowired
