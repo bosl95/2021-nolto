@@ -1,9 +1,6 @@
 package com.wooteco.nolto.auth.domain;
 
-import com.wooteco.nolto.auth.infrastructure.oauth.GithubClient;
-import com.wooteco.nolto.auth.infrastructure.oauth.GithubOAuthInfo;
-import com.wooteco.nolto.auth.infrastructure.oauth.GoogleClient;
-import com.wooteco.nolto.auth.infrastructure.oauth.GoogleOAuthInfo;
+import com.wooteco.nolto.auth.infrastructure.oauth.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(classes = {GithubOAuthInfo.class, GoogleOAuthInfo.class, GithubClient.class, GoogleClient.class, OAuthClientProvider.class})
+@SpringBootTest(classes = {GithubOAuthInfo.class, GoogleOAuthInfo.class, GithubClient.class, GoogleClient.class, OAuthClientProvider.class, NoltoHubClient.class, NoltoHubOAuthInfo.class})
 class OAuthClientProviderTest {
 
     @Autowired
