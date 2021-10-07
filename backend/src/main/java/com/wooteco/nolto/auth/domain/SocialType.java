@@ -7,7 +7,8 @@ import java.util.Arrays;
 
 public enum SocialType {
     GITHUB,
-    GOOGLE;
+    GOOGLE,
+    NOLTOHUB;
 
     public static SocialType findBy(String socialTypeName) {
         return Arrays.stream(SocialType.values())
