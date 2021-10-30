@@ -6,6 +6,10 @@
           <option name="url" value="https://github.com/ecsimsw/spring-study.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://git.heroku.com" />
+          <option name="userName" value="b5560a23be6943" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Desktop/study/wootech/level2" />
