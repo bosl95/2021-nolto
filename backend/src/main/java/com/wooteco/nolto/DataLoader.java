@@ -136,5 +136,31 @@ public class DataLoader implements ApplicationRunner {
         commentRepository.save(comment12);
 
         likeRepository.save(new Like(mickey, saveFeed1));
+
+        for (User user : users) {
+            Feed feed = Feed.builder()
+                    .title("title2")
+                    .content("content2")
+                    .step(Step.COMPLETE)
+                    .isSos(false)
+                    .storageUrl(URL)
+                    .deployedUrl(URL)
+                    .thumbnailUrl("https://dksykemwl00pf.cloudfront.net/KakaoTalk_Photo_2021-07-19-14-25-01.png")
+                    .build().writtenBy(user);
+            feedRepository.save(feed);
+        }
+
+        for (User user : users) {
+            Feed feed = Feed.builder()
+                    .title("title2")
+                    .content("content2")
+                    .step(Step.PROGRESS)
+                    .isSos(false)
+                    .storageUrl(URL)
+                    .deployedUrl(URL)
+                    .thumbnailUrl("https://dksykemwl00pf.cloudfront.net/KakaoTalk_Photo_2021-07-19-14-25-01.png")
+                    .build().writtenBy(user);
+            feedRepository.save(feed);
+        }
     }
 }

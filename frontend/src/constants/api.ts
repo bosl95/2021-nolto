@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export const BASE_URL: { [key: string]: string } = {
-  development: 'https://nolto-dev.kro.kr',
+//  development: 'https://nolto-dev.kro.kr',
+  development: 'http://localhost:8080',
   production: 'https://nolto.kro.kr',
 };
 
